@@ -213,7 +213,7 @@ namespace Disk {
 
         private HuFileEntry MakeFileEntry(string EntryFilename, int Size, DateTime FileDate) {
             var fe = DiskEntry.GetWritableEntry(EntryFilename);
-            fe.Set(EntryFilename, Size, FileDate, Setting.ExecuteAddress, Setting.LoadAddress);
+            fe.Set(EntryFilename, Size, FileDate, Setting.ExecuteAddress, Setting.LoadAddress, !Setting.ForceAsciiMode);
             return fe;
         }
 
